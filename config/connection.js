@@ -31,3 +31,5 @@ connection.connect (function (err) {
 app.listen (PORT, function (){ 
     console.log ("Server is listening on port " + PORT); 
 })
+
+module.exports = connection; 
