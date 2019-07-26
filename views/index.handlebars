@@ -1,17 +1,15 @@
-Burgers! 
+<h1>BURGERS!</h1> 
 
-Burgers I want to eat! 
+<h2>Burgers I want to eat! </h2> 
 <ul>
     {{#each burgers}}
         {{#unless devoured}}
-        <li>
             {{id}}
             {{burger_name}} 
-            {{!-- <button class="eat" data-id = {{id}} data-devoured = {{devoured}}></button> --}}
         {{/unless}}
     {{/each}}    
 </ul> 
 
 
 
-Burgers I already ate.
+<h2>Burgers I already ate.</h2>
