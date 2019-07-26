@@ -3,12 +3,12 @@ var connection = require("./connection");
 
 var orm = { 
     // CREATE A METHOD TO SELECT ALL FROM THE DB
-    allBurgers: function(table, res) {
+    all: function(table, cb) {
         var queryString = `SELECT * FROM ${table}`  ;
         console.log(queryString); 
         connection.query(queryString, function(err, res) {
             if (err) throw err; 
-            console.log(res); 
+            cb(res); 
         }); 
     }, 
 

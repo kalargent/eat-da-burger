@@ -1,18 +1,19 @@
 var express = require ("express"); 
-var burgers = require ("../models/burger"); 
+var burgerModel = require ("../models/burger"); 
 var router = express.Router(); 
 
 // CREATE THE ROUTER 
 
 router.get ("/", function (req, res) {
-    burgers.allBurgers (function  (data) {
+    burgerModel.allBurgers(function(data) {
+        console.log("before the var"); 
         var burgerObj = {
-            burger: data, 
-        }
+            burgers: data 
+        };
         console.log(burgerObj); 
         res.render("index", burgerObj); 
-    })
-})
+    });
+});
 
 
 // EXPORT 
