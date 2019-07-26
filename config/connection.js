@@ -27,9 +27,5 @@ connection.connect (function (err) {
     console.log ("Connected as id + " + connection.threadId); 
 })
 
-// LISTENER 
-app.listen (PORT, function (){ 
-    console.log ("Server is listening on port " + PORT); 
-})
 
 module.exports = connection; 
