@@ -21,12 +21,13 @@ $(function () {
         )
     }); 
 
-    $("addAburger").on("submit", function (event) {
-        event.preventdefault(); 
+    $(".post").on("click", function (event) {
+        // event.preventdefault(); 
+        console.log("you're trying to add"); 
 
         var newBurger = {
-            name: $("addNew").val(), 
-            devoured: "0"
+            name: $(".add-new").val(), 
+            devoured: 0 
         }
         console.log(newBurger); 
 
@@ -38,7 +39,7 @@ $(function () {
         .then(
             function (){ 
                 console.log("new cat added"); 
-                location.reload()
+                // location.reload()
             }
         )
     

@@ -33,10 +33,10 @@ var orm = {
     }, 
 
     add: function (table, cols, vals, cb){ 
-        var queryString = `INSERT INTO ${table} (${cols}) VALUES (${vals})`
+        var queryString = `INSERT INTO ${table} (${cols}) VALUES ('${vals[0]}', ${vals[1]})`
         console.log(queryString); 
 
-        connection.query(queryString, cols, vals, function (err, res) { 
+        connection.query(queryString, function (err, res) { 
             if (err) { 
                 throw err; 
             }

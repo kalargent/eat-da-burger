@@ -37,7 +37,7 @@ router.post("/api/burgers", function (req, res) {
     burger.addBurgers([
         "burger_name", "devoured" 
     ], 
-    [req.body.name, req.body.sleepy], 
+    [req.body.name, req.body.devoured], 
     function (result) {
         res.json({ id: result.insertId})
     }); 

@@ -15,9 +15,9 @@ var burgers = {
     }, 
 
     addBurgers: function (cols, vals, cb) {
-        orm.add("burgers", cols, vals, {function (res) {
+        orm.add("burgers", cols, vals, function (res) {
             cb(res); 
-        }})
+        })
     }
 }
 
