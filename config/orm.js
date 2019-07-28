@@ -30,6 +30,20 @@ var orm = {
             cb(res); 
 
         })
+    }, 
+
+    add: function (table, cols, vals, cb){ 
+        var queryString = `INSERT INTO ${table} (${cols}) VALUES (${vals})`
+        console.log(queryString); 
+
+        connection.query(queryString, cols, vals, function (err, res) { 
+            if (err) { 
+                throw err; 
+            }
+            else {
+                cb(res); 
+            }
+        })
     }
 
 }; 

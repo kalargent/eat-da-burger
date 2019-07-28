@@ -25,7 +25,7 @@ router.put("/api/burgers/:id", function (req, res) {
         req.body.devoured, condition, function (result) { 
             console.log(result); 
         if (result.changedRows === 0) {
-            return res.status(200 ).end(); 
+            return res.status(200).end(); 
         }
         else {
             res.status(200).end(); 
