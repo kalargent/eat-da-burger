@@ -19,5 +19,28 @@ $(function () {
                 location.reload(); 
             }
         )
+    }); 
+
+    $("addAburger").on("submit", function (event) {
+        event.preventdefault(); 
+
+        var newBurger = {
+            name: $("addNew").val(), 
+            devoured: "0"
+        }
+        console.log(newBurger); 
+
+        $.ajax ("api/burgers", {
+            type: "POST", 
+            data: newBurger
+        })
+
+        .then(
+            function (){ 
+                console.log("new cat added"); 
+                location.reload()
+            }
+        )
+    
     })
 })

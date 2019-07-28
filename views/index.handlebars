@@ -1,31 +1,39 @@
-<h1>BURGERS!</h1> 
+<h1>BURGERS!</h1>
 
-<h2>Burgers I want to eat! </h2> 
+<h2>Burgers I want to eat! </h2>
 <ul>
     {{#each burgers}}
-        {{#unless devoured}}
-        <li>
-            {{id}}
-            {{burger_name}} 
-            <button class="eat-burger" data-id="{{id}}" data-devoured="1" > 
-                EAT IT!! </button>
-        </li>
-        {{/unless}}
-    {{/each}}    
-</ul> 
+    {{#unless devoured}}
+    <li>
+        {{id}}
+        {{burger_name}}
+        <button class="eat-burger" data-id="{{id}}" data-devoured="1">
+            EAT IT!! </button>
+    </li>
+    {{/unless}}
+    {{/each}}
+</ul>
 
 
 
 <h2>Burgers I already ate.</h2>
 <ul>
     {{#each burgers}}
-        {{#if devoured}}
-        <li>
-            {{id}}
-            {{burger_name}} 
-            <button class="eat-burger" data-id="{{id}}" data-devoured="0" > 
-                MAKE IT AGAIN! </button>
-        </li>
-        {{/if}}
-    {{/each}}    
-</ul> 
+    {{#if devoured}}
+    <li>
+        {{id}}
+        {{burger_name}}
+        <button class="eat-burger" data-id="{{id}}" data-devoured="0">
+            MAKE IT AGAIN! </button>
+    </li>
+    {{/if}}
+    {{/each}}
+</ul>
+
+<form class="addAburger">
+    <div class="form-group">
+        <label for="addNew"> Enter the next burger you want to make.  </label>
+        <input type="text" class="form-control" id="addNewBurger" 
+            placeholder="Enter a burger here">
+    <button type="submit" class="btn btn-primary post">Submit</button>
+</form>
