@@ -7,6 +7,12 @@ var burgers = {
             cb(res); 
         }); 
     }, 
+
+    updateBurgers: function (objColVals, condition, cb) { 
+        orm.update("burgers", objColVals, condition, function (res) { 
+            cb(res); 
+        })
+    }
 }
 
 // EXPORT 
