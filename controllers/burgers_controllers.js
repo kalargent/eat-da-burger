@@ -33,6 +33,16 @@ router.put("/api/burgers/:id", function (req, res) {
     }); 
 }); 
 
+router.post("/api/burgers", function (req, res) {
+    burger.addBurgers([
+        "burger_name", "devoured" 
+    ], 
+    [req.body.name, req.body.sleepy], 
+    function (result) {
+        res.json({ id: result.insertId})
+    }); 
+}); 
+
 
 // EXPORT 
 module.exports = router;  
