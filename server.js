@@ -6,6 +6,7 @@ var app = express();
 
 // USE THE PUBLIC FOLDER 
 app.use(express.static("public"));
+app.use(express.static(__dirname + '/public'));
 
 // JSON PARSING
 app.use(express.urlencoded({ extended: true }));

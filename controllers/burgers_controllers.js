@@ -4,6 +4,7 @@ var router = express.Router();
 
 // CREATE THE ROUTER 
 
+// GET ROUTE TO DISPLAY ALL THE BURGERS IN THE DB 
 router.get ("/", function (req, res) {
     burger.allBurgers(function(data) {
         console.log("before the var"); 
@@ -15,6 +16,7 @@ router.get ("/", function (req, res) {
     });
 });
 
+// PUT ROUTE TO UPDATE A BURGER WHEN ITS EATEN OR REMADE 
 router.put("/api/burgers/:id", function (req, res) {
     var condition = req.params.id; 
     console.log(condition);
@@ -33,6 +35,7 @@ router.put("/api/burgers/:id", function (req, res) {
     }); 
 }); 
 
+// POST TO ADD A NEW BURGER 
 router.post("/api/burgers", function (req, res) {
     burger.addBurgers([
         "burger_name", "devoured" 

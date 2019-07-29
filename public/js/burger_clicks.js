@@ -1,4 +1,7 @@
+// CLICK HANDLER 
+
 $(function () {
+    // FUNCTION THAT LISTENS FOR THE EAT BURGER CLICK 
     $(".eat-burger").on("click", function (){
         console.log("you're trying to eat me.")
         var id = $(this).data("id"); 
@@ -21,6 +24,7 @@ $(function () {
         )
     }); 
 
+    // CLICK HANDLER FOR ADDING A NEW BURGER 
     $(".post").on("click", function (event) {
         // event.preventdefault(); 
         console.log("you're trying to add"); 
