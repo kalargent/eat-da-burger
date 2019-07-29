@@ -7,11 +7,18 @@ li {
     font-size: medium; 
 }
 
-h1 {
-    color: #3188A8;  
-    font-family: 'Julius Sans One', sans-serif;
+h1 { 
+    color: #F3E7CA;  
+    font-family: 'Julius Sans One', serif;
+    /* font-family: 'Cantarell', sans-serif; */
     font-weight: bolder;
     font-size: 75px; 
+    /* text-shadow:
+		-4px -4px 0 #3188A8,
+		4px -4px 0 #3188A8,
+		-4px 4px 0 #3188A8,
+        4px 4px 0 #3188A8; */
+    stroke: #3188A8 5px; 
 }
 
 h3 {
